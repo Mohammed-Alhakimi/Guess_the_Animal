@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Guess the Animal/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Shape hierarchy" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/A line that throws an exception" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Calculate Square" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Determine an exception" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Explore the standard class library" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Is the code fully protected" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Name an exception" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Out of bounds" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/When an exception occurs" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Where an exception occurs" />
+            <option value="$PROJECT_DIR$/Topics/Comparing dates and time/Don't be late again" />
+            <option value="$PROJECT_DIR$/Topics/Comparing dates and time/How many date-time pairs match the range" />
+            <option value="$PROJECT_DIR$/Topics/Comparing dates and time/Select correct statements" />
+            <option value="$PROJECT_DIR$/Topics/Comparing dates and time/The intersection of time ranges" />
+            <option value="$PROJECT_DIR$/Topics/Comparing dates and time/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Checked exception with constructor" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/DriverNotReadyException" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Exception chaining" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Handle incorrect inputs" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Square class" />
+            <option value="$PROJECT_DIR$/Topics/Custom exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Lambda expressions/Apply function to all elements" />
+            <option value="$PROJECT_DIR$/Topics/Lambda expressions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/About recursion" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Alternating Fibonacci numbers" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Find a substring" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Fix a method to check the string is palindrome" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Fix the method to print strings in the reverse order" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/K-combination" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Obscure method" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Operations with number n" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Select statement" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/What does the method do" />
+            <option value="$PROJECT_DIR$/Topics/Recursion/Zeros and ones" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
