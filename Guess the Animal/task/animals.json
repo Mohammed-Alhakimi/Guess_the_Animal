@@ -1,0 +1,44 @@
+{
+  "data" : "Is it a mammal?",
+  "type" : "QUESTION",
+  "yes" : {
+    "data" : "Is it living in the forest?",
+    "type" : "QUESTION",
+    "yes" : {
+      "data" : "Does it have a long bushy tail?",
+      "type" : "QUESTION",
+      "yes" : {
+        "data" : "fox",
+        "type" : "ANSWER"
+      },
+      "no" : {
+        "data" : "Is it a shy animal?",
+        "type" : "QUESTION",
+        "yes" : {
+          "data" : "hare",
+          "type" : "ANSWER"
+        },
+        "no" : {
+          "data" : "wolf",
+          "type" : "ANSWER"
+        }
+      }
+    },
+    "no" : {
+      "data" : "Can it climb trees?",
+      "type" : "QUESTION",
+      "yes" : {
+        "data" : "cat",
+        "type" : "ANSWER"
+      },
+      "no" : {
+        "data" : "dog",
+        "type" : "ANSWER"
+      }
+    }
+  },
+  "no" : {
+    "data" : "shark",
+    "type" : "ANSWER"
+  }
+}
