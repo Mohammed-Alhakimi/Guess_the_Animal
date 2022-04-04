@@ -1,4 +1,4 @@
-package animals;
+package userinterface;
 
 import java.time.LocalTime;
 import java.util.*;

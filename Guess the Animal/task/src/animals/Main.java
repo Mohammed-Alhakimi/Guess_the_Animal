@@ -1,8 +1,10 @@
 package animals;
 
 import com.beust.jcommander.*;
+import userinterface.ReplyGen;
+import userinterface.UserInterface;
 
-import static animals.GrammarUtils.*;
+import static userinterface.GrammarUtils.*;
 
 public class Main {
     @Parameter(names = {"-type", "-t"}, description = "Specifies the type for object mapping")

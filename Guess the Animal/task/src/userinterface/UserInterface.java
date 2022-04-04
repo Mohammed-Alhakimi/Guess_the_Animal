@@ -1,5 +1,9 @@
-package animals;
+package userinterface;
 
+import objectmapper.MapperFactory;
+import binarytree.BinaryTree;
+import binarytree.BinaryTreePrinter;
+import binarytree.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
@@ -7,7 +11,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.*;
 
-import static animals.GrammarUtils.*;
+import static userinterface.GrammarUtils.*;
 
 public class UserInterface {
 
@@ -25,7 +29,7 @@ public class UserInterface {
         String fileName = "animals." + typeMapping;
         ObjectMapper mapper = new MapperFactory().createObjectMapper(typeMapping);
         try {
-            this.tree.root = mapper.readValue(new File(fileName), TreeNode.class);
+            this.tree.setRoot(mapper.readValue(new File(fileName), TreeNode.class));
         } catch (IOException e) {
             //In case the file was not found that means that the tree is not saved yet so the tree will be initialized
             initializeTree();
@@ -83,7 +87,7 @@ public class UserInterface {
     }
 
     private void printStats() {
-        String root = changeQuestionToFact(tree.root.getData(), true);
+        String root = changeQuestionToFact(tree.getRoot().getData(), true);
         int nodesCount = tree.nodes();
         int animalsCount = tree.animals();
         int statementsCount = nodesCount - animalsCount;
@@ -103,10 +107,10 @@ public class UserInterface {
 
     private double getAvgDepth() {
         animals = new ArrayList<>();
-        inOrderTraverse(tree.root);
+        inOrderTraverse(tree.getRoot());
         AtomicInteger sumOfDepths = new AtomicInteger(0);
         animals.forEach(animal->{
-            sumOfDepths.getAndAdd(tree.findDepth(tree.root,animal));
+            sumOfDepths.getAndAdd(tree.findDepth(tree.getRoot(),animal));
         });
         return (double)sumOfDepths.get() / tree.animals();
     }
@@ -121,15 +125,15 @@ public class UserInterface {
                 "3");
         prt("Enter the animal:");
         String animalToSearch = scanner.nextLine().toLowerCase(Locale.ROOT);
-        TreeNode animal = search(animalToSearch, tree.root);
+        TreeNode animal = search(animalToSearch, tree.getRoot());
         try {
             animalFacts = new ArrayDeque<>();
             animalFacts.addFirst(animal.getData());
-            addAncestorsToFactsDeque(tree.root, animal.data);
+            addAncestorsToFactsDeque(tree.getRoot(), animal.data);
             Deque<String> animalFactsToPrint = new ArrayDeque<>();
             while (animalFacts.size() > 1) {
                 String child = animalFacts.pop();
-                TreeNode parent = search(animalFacts.peek(), tree.root);
+                TreeNode parent = search(animalFacts.peek(), tree.getRoot());
                 if (parent.yes.getData().equals(child)) {
                     animalFactsToPrint.addFirst(changeQuestionToFact(parent.getData(), true));
                 } else if (parent.no.getData().equals(child)) {
@@ -158,14 +162,14 @@ public class UserInterface {
 
             // Traverse the left side. While traversing, push the nodes into
             // the stack so that their right subtrees can be traversed later
-            while (root != null && root.data != key) {
+            while (root != null && !root.data.equals(key)) {
                 st.push(root);   // push current node
                 root = root.yes;   // move to next node
             }
 
             // If the node whose ancestors are to be printed is found,
             // then break the while loop.
-            if (root != null && root.data.equals(key))
+            if (root != null)
                 break;
 
             // Check if right sub-tree exists for the node at top
@@ -177,7 +181,7 @@ public class UserInterface {
 
                 // If the popped node is right child of top, then remove the top
                 // as well. Left child of the top must have processed before.
-                while (st.empty() == false && st.peek().no == root) {
+                while (!st.empty() && st.peek().no == root) {
                     root = st.peek();
                     st.pop();
                 }
@@ -216,7 +220,7 @@ public class UserInterface {
         prt("Your choice:\n" +
                 "2");
         animals = new ArrayList<>();
-        inOrderTraverse(tree.root);
+        inOrderTraverse(tree.getRoot());
         if (animals.isEmpty()) {
             prt("You don't have any animals yet!");
         } else {
@@ -243,7 +247,7 @@ public class UserInterface {
 
     private void playTheGame() {
         startGame();
-        TreeNode focusNode = traverse(tree.root);
+        TreeNode focusNode = traverse(tree.getRoot());
         String guess = focusNode.getData();
         prt("Is it " + processArticle(focusNode.getData()) + "?");
         String reply = stripReplies(scanner.nextLine());

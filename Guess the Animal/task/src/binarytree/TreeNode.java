@@ -1,4 +1,4 @@
-package animals;
+package binarytree;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
@@ -29,7 +29,7 @@ public class TreeNode {
         return Type.QUESTION.equals(this.type);
     }
 
-    enum Type {
+    public enum Type {
         ANSWER, QUESTION;
     }
 }

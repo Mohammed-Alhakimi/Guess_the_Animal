@@ -1,4 +1,4 @@
-package animals;
+package binarytree;
 
 import java.io.PrintStream;
 

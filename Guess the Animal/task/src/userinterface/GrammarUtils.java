@@ -1,4 +1,4 @@
-package animals;
+package userinterface;
 
 import java.util.Scanner;
 import java.util.regex.*;
